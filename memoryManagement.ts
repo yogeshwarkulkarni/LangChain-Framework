@@ -37,9 +37,8 @@ const agent = createAgent(
         model: 'claude-sonnet-4-5-20250929',
         tools: [getWeatherLocation],
         systemPrompt,
-        checkMemory
+        checkpointer: checkMemory
     }
-
 );
 
 const response1 = await agent.invoke(
